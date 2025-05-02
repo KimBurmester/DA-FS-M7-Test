@@ -7,7 +7,6 @@ let allNotes = {
   'trashNotes': []
 }
 
-//FUNC: renderNotes()
 function renderNotes() {
   let contentRef = document.getElementById('content');
   contentRef.innerHTML = "";
@@ -17,14 +16,37 @@ function renderNotes() {
 }
 function getNoteTemplate(indexNote) {
   return`<div>class="note">
-  <h3>${notesTitles[indexNote]}</h3>
-  <p>${notes[indexNote]}</p>
+  <h3>${allNotes.notesTitles[indexNote]}</h3>
+  <p>${allNotes.notes[indexNote]}</p>
   <button onclick="noteToTrash(${indexNote})" class="btn"></button>
   <button onclick="noteToArchiv(${indexNote})" class="btn"></button>
   </div>
   </div>`;
 }
 
+function getArchiveNoteTemplate(indexArchivNote) {
+  return 
+  `<div class="note">
+    <h3>${allNotes.archivNotesTitles[indexArchivNote]}</h3>
+    <p>${allNotes.archivNotes[indexArchivNote]}</p>
+    <div>
+        <button onclick="archivToTrash(${indexArchivNote})" class="btn"></button>
+  <button onclick="archivToNote(${indexArchivNote})" class="btn"></button>
+    </div>
+  </div>`;
+}
+
+function getTrashNoteTemplate(indexTrashNote) {
+  return 
+  `<div class="note">
+    <h3>${allNotes.trashNotesTitles[indexTrashNote]}</h3>
+    <p>${allNotes.trashNotes[indexTrashNote]}</p>
+    <div>
+        <button onclick="deleteNote(${indexTrashNote})" class="btn"></button>
+  <button onclick="trashToNote(${indexTrashNote})" class="btn"></button>
+    </div>
+  </div>`;
+}
 
 
 
