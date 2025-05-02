@@ -48,14 +48,13 @@ function getTrashNoteTemplate(indexTrashNote) {
   </div>`;
 }
 
-
-
-
 //FUNC: renderArchivNotes()
 
 //FUNC: renderTrashNotes()
 
 //FUNC: addNote()
+
+//NOTE: weitere Funktionen einbauen, siehe vorherige Videos und Dateien im Modul 6 und 7
 
 
 
