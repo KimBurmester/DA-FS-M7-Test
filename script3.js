@@ -15,7 +15,19 @@ function renderNotes() {
     contentRef.innerHTML += getNoteTemplate(indexNote);
   }
 }
-//NOTE:
+function getNoteTemplate(indexNote) {
+  return`<div>class="note">
+  <h3>${notesTitles[indexNote]}</h3>
+  <p>${notes[indexNote]}</p>
+  <button onclick="noteToTrash(${indexNote})" class="btn"></button>
+  <button onclick="noteToArchiv(${indexNote})" class="btn"></button>
+  </div>
+  </div>`;
+}
+
+
+
+
 
 //FUNC: renderArchivNotes()
 
